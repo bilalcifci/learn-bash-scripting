@@ -14,14 +14,21 @@
 # Oluşturulan yedek dosyası, '~/Desktop/GitCloneRepo/learn-bash-scripting/section_1/my_backup/' dizinine kaydedilir.
 # Dosya adı tarih-saat bilgisi içerir (örn: backup_30-07-2025_17-45-30.tar).
 
+echo "Merhaba ${USER^}"
+echo "Ana dizininizi yedekleyecegim, <$HOME>"
+
+echo "Bu scripti $(pwd) dizininden calistiriyorsun."
+echo "Bu neden $(pwd) dizinine kaydedecegim"
 # Define backup directory
-BACKUP_DIR="$HOME/Desktop/GitCloneRepo/learn-bash-scripting/section_1/my_backup"
+BACKUP_DIR="$(pwd)"
 
 # Create the backup directory if it doesn't exist
 mkdir -p "$BACKUP_DIR"
 
 # Create tar archive with timestamp in name
-tar -cvf "$BACKUP_DIR/backup_$(date +%d-%m-%Y_%H-%M-%S).tar" "$HOME"/* 2>/dev/null
+tar -cf "$BACKUP_DIR/backup_$(date +%d-%m-%Y_%H-%M-%S).tar" "$(pwd)"/* 2>/dev/null
+
+echo "Yedekleme tamamlandi."
 
 # Exit script
 exit 0
