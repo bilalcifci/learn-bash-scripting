@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Author: Bilal Cifci
+# Date Created: 30/7/2025
+# Last Modified: 30/7/2025
+
+# Description
+# Prints "This is my first script" to the terminal
+
+# Usage
+# our_first_script
+
+echo "This is my first script"
+exit 0

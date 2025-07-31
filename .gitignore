@@ -1,0 +1,8 @@
+*.Identifier
+
+# LibreOffice lock dosyaları
+*.~lock.*#
+
+# Tüm .tar arşivlerini ignore et
+*.tar
+
